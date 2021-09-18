@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts/scroll_progress.js" charset="utf-8"></script>
+    <script src="scripts/portfolio_links.js" charset="utf-8"></script>
+    <title>Eli MacColl Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <h1> < Eli MacColl > </h1>
+      <nav>
+        <ul>
+          <li id="left_nav">
+            <a id="current" href="portfolio.html">/portfolio</a>
+          </li>
+          <li>
+            <a href="resume.html">/resume</a>
+          </li>
+          <li>
+            <a href="#contact_jump">/contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="progress-container fixed-top">
+        <span class="progress-bar"></span>
+      </div>
+    </header>
+    <div class="main_container">
+      <section class="intro_container">
+        <div class="intro_text">
+            <h1>Hello, I'm Eli!</h1>
+            <p>
+              I am a computer science and computer engineering student at Northeastern University that is driven by my passion for technology. 
+              I am always looking for ways to further explore the industry and become a better engineer in the process!  I made this site to house
+              some of my favorite projects so far, so feel free to check them out!
+            </p>
+        </div>
+      </section>
+      <section class="project_container">
+        <div class="project_container_header">
+          <h1>Projects</h1>
+          <div class="divider"></div>
+        </div>
+        <div id="project_card1" class="project_card">
+          <div id="project1_desc" class="project_desc">
+            <div class="project_desc_title">
+              <h1>Easy Animator with Java</h1>
+            </div>
+            <div class="project_desc_text">
+              <p>
+                Uses text file inputs
+                that define initial and end values for shape, time, dimensions,
+                position, and RGB color to generate animations.  The program supports
+                outputting animations as SVG files and within an interactive GUI with the following
+                functionalities: Play, Pause, Loop, Restart, Discrete Time,
+                Toggle Shape Fill, and a Speed Slider.
+              </p>
+            </div>
+          </div>
+          <div class="project_pic">
+            <img id="project1_pic" src="assets/selection_sort_captioned.svg" alt="Selection sort algorithm demonstrated using the animator I developed in Java">
+            <script>
+               $( document ).ready(function(){
+                    let images = [
+                         "assets/selection_sort_captioned.svg",
+                         "assets/selection_sort_captioned.svg",
+                         "assets/selection_sort_captioned.svg"
+                    ];
+                    var i = 0;
+                    window.setInterval(function(){
+                         $('#project1_pic').attr("src", images[i]);
+                         i = (i==images.length-1) ? 0 : i+1;
+                    }, 51500);
+               });
+             </script>
+          </div>
+        </div>
+        <div id="project_card2" class="project_card">
+          <div class="project_pic">
+            <img id=project2_pic src="assets/maze_solver.gif" alt="GIF of maze solving program solving a maze in the shortest path step by step">
+          </div>
+          <div class="project_desc">
+            <div class="project_desc_title">
+              <h1>Shortest Path Maze Solver with C++</h1>
+            </div>
+            <div class="project_desc_text">
+              <p>
+                Solves text file mazes and displays the shortest path to the goal.
+                It demonstrates the use of breadth-first search (BFS) and then
+                Dijkstra's algorithm for each maze.<br><br>
+                <em>- The + is navigating the maze<br>
+                    - The * is the goal <br>
+                    - The X's are walls</em>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="project_card3" class="project_card">
+          <div class="project_desc">
+            <div class="project_desc_title">
+              <h1>Image Segmentation with MATLAB</h1>
+            </div>
+            <div class="project_desc_text">
+              <p>
+                Used GMM-based clustering to segment color images in MATLAB. This process included preprocessing the image, 
+                maximum likelihood estimation, 10-fold cross validation using BIC for model selection, fitting a new GMM and 
+                segmenting the image with the number of Gaussian components.
+              </p>
+            </div>
+          </div>
+          <div class="project_pic">
+            <img id=project3_pic src="assets/image_segmentation_results.png" alt="Shows two sets of images side by side of pre and post image segmentation.  The first set of pictures is of a bird, the second is a plane.">
+          </div>
+        </div>
+        <div id="project_card4" class="project_card">
+          <div class="project_pic">
+            <img id="project4_pic" src="assets/coral_bleaching_map1.gif" alt="GIF showing off interactive maps of coral bleaching locations">
+            <script>
+               $( document ).ready(function(){
+                    let images = [
+                         "assets/coral_bleaching_map2.gif",
+                         "assets/coral_bleaching_map3.gif",
+                         "assets/coral_bleaching_map4.gif",
+                         "assets/coral_bleaching_map1.gif"
+                    ];
+                    var i = 0;
+                    window.setInterval(function(){
+                         $('#project4_pic').attr("src", images[i]);
+                         i = (i==images.length-1) ? 0 : i+1;
+                    }, 60000);
+               });
+             </script>
+          </div>
+          <div class="project_desc">
+            <div class="project_desc_title">
+              <h1 id="project4_h1">Mapping Coral Bleaching with Python and SQL</h1>
+            </div>
+            <div id ="project4_desc_text" class="project_desc_text">
+              <p>
+                The interactive maps utilize an SQL database with coral
+                bleaching data from across the globe. Data entries include
+                location information, the source the reported it, coral species,
+                coral family, percentage affected, water temperature, and
+                metrics for bleaching severity, mortality and recovery.
+                <!-- <br><em>Click to check it out!</em> -->
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="project_card5" class="project_card">
+          <div class="project_desc">
+            <div class="project_desc_title">
+              <h1>Single-Cycle MIPS Processor with Verilog</h1>
+            </div>
+            <div id="project5_desc_text" class="project_desc_text">
+              <p>
+                Performs instruction sets of machine code that were translated from MIPS
+                assembly language.  Designed with behavioral Verilog code to establish
+                the data path and generate the following components: Program Counter,
+                Instruction Memory, Instruction Decoder, Register, ALU,
+                Multiplexers, Data Memory, and a Debouncer.
+                <!-- <br><em>Used Xilinx Vivado Design Suite and PYNQ Z2 FPGA board.</em> -->
+              </p>
+            </div>
+          </div>
+          <div class="project_pic">
+            <img id="project5_pic" src="assets/mips_proc_preview.png" alt="Wiring diagram for Single-Cycle MIPS processor">
+          </div>
+        </div>
+      </section>
+      <section id="contact_jump" class="contact_container">
+        <div class="contact_info_header">
+          <h2>Contact Me</h2>
+        </div>
+        <div class="contact_email">
+          <a id="contact_email" href="mailto: maccoll.e@northeastern.edu">maccoll.e@northeastern.edu</a>
+        </div>
+        <div class="contact_icon_container">
+          <div id="nuworks_icon_container" class="contact_icon">
+            <a href="https://northeastern-csm.symplicity.com/profiles/eli.maccoll">
+              <img src="assets/nuworks_icon.png" alt="northeastern university logo">
+            </a>
+          </div>
+          <div class="contact_icon">
+            <a href="https://github.com/elimaccoll">
+              <img id="github_icon" src="assets/github_icon.png" alt="github logo">
+            </a>
+          </div>
+          <div id="linkedin_icon_container" class="contact_icon">
+            <a href="https://www.linkedin.com/in/elimaccoll/">
+              <img src="assets/linkedin_icon.png" alt="linkedin logo">
+            </a>
+          </div>
+      </section>
+    </body>
+  </html>

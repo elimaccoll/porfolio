@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style_lights_out.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts/lights_on.js" charset="utf-8"></script>
+    <title>Turn on the lights</title>
+  </head>
+  <body class="body">
+    <div class="tr">
+      <div class="name_container">
+        <h2>
+          <span class="name_letter1" id="firstname">E</span>
+          <span class="name_letter2">L</span>
+          <span class="name_letter3">I</span>
+          <span  class="name_letter4" id="lastname">M</span>
+          <span class="name_letter5">A</span>
+          <span class="name_letter6">C</span>
+          <span class="name_letter7">C</span>
+          <span class="name_letter8">O</span>
+          <span class="name_letter9">L</span>
+          <span class="name_letter10">L</span>
+        </h2>
+      </div>
+    </div>
+    <div class="content_container_main">
+      <div id="portfolio_link_container" class="content_container">
+        <p id="portfolio_link_attribute" class="content_link">My Portfolio</p>
+        <img id="portfolio_icon" class="content_icon" src="assets/portfolio_icon_static.png" alt="">
+      </div>
+      <div class="instruction_container">
+        <img id="arrow_left" src="assets/light_arrow.png" alt="">
+        <h2 class="instruction_text">Click the lever to turn<br>on the power!</h2>
+        <img id="arrow_right" src="assets/light_arrow.png" alt="">
+      </div>
+      <div id="resume_link_container" class="content_container">
+        <p id="resume_link_attribute" class="content_link">My Resume</p>
+        <img id="resume_icon" class="content_icon" src="assets/resume_icon.png" alt="">
+      </div>
+      <div class="lever_container">
+        <div class="lever_base">
+          <img src="assets/light_symbol.png" alt="">
+        </div>
+        <div class="lever_switch_container">
+          <div class="lever_light_container">
+            <div class="lever_lights"></div>
+            <div class="lever_lights"></div>
+            <div class="lever_lights"></div>
+          </div>
+          <div class="lever_handle_container">
+            <div class="lever_beam_container_off">
+              <div class="lever_bolt_outer">
+                <div class="lever_beam" onclick="">
+                  <div class="lever_beam_tip"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

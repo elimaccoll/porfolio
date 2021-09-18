@@ -1,0 +1,95 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  /* background-color: #7ba9e3; */
+  background-color: #E3E9F2;
+  color: #121130;
+  margin: 0;
+  height: 140vh;
+}
+
+body a {
+  color: #121130;
+  text-decoration: none;
+}
+
+header {
+  /* position: sticky;
+  position: -webkit-sticky; */
+  top: 0;
+  width: 90%;
+  margin: auto;
+}
+
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+header h1 {
+  float: left;
+  font-size: 40px;
+  margin-left: 100px;
+}
+
+nav {
+  float: right;
+  margin-right: 30px;
+  margin-top: 20px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  font-size: 20px;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 3px;
+  background-color: #1f2a59;
+
+  position: absolute;
+  bottom: 10px;
+  width: 0%;
+
+  transition: all ease-in-out 200ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+nav #current::before {
+  width: 100%;
+}
+
+.main_container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 90%;
+  height: 90%;
+}
+
+.resume_container {
+  margin-top: 20px;
+  width: 80%;
+  height: 90%;
+}
